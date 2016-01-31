@@ -17,4 +17,8 @@ describe('Pizza', function() {
   var testPizza = new Pizza (0, "large");
   expect(testPizza.sizePrice()).to.equal(20);
   });
+  it("creates the price of the pizza based on the size and toppings", function() {
+  var testPizza = new Pizza (4, "small");
+  expect(testPizza.pizzaPrice()).to.equal(12);
+});
 });
