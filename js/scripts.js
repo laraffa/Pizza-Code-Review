@@ -19,3 +19,8 @@ Pizza.prototype.pizzaPrice = function() {
   var totalPrice = sizePrice + (this.toppings * 0.50);
   return totalPrice;
   }
+
+  //User Interface Logic
+  $(document).ready(function() {
+    $("#myBtn").click(function() {
+      $("#myModal").modal();
