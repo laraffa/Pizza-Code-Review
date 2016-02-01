@@ -1,45 +1,38 @@
-# WARNING - DO NOT CLONE. 
-# DOWNLOAD ZIP INSTEAD
-#### If you clone, it will list me as a contributor and retain all the old commits, and you don't want that. Download Zip instead then change folder name.
+# Pizza Website
 
-=========
-# insertApplicationName
+#### Code Review for Week 4, design a pizza calculator, January 29th, 2016
 
-#### briefDescription, dateOfCurrentVersion_
-
-#### By _**insertContributorNumberOne, insertContributorNumberTwo **_
+#### By Lindsey Raffa
 
 ## Description
 
-_insertDetailedDescriptionsOfApplication_
+This is an app where you can select your pizza size, quantity, and toppings and it will out put the price of your personalized pizza.
 
-## Setup/Installation Requirements
-
-* _list_
-* _all_
-* _requirements_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+None
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+If issues occur, edits are highly encouraged.
 
 ## Technologies Used
 
-* _list_
-* _all_
-* _tech_
-* _used_
+* html, css
+* Javascript
+* Bootstrap, Jquery
+* MochaJs, ChaiJs
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
 
 ### License
 
-*This software is licensed under the MIT license.*
+The MIT License (MIT)
 
-Copyright (c) 2016 **By insertContributorsHere**
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+**Lindsey Raffa**
+Copyright (c) 2016 Lindsey Raffa
