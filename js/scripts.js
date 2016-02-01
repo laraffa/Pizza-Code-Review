@@ -24,3 +24,14 @@ Pizza.prototype.pizzaPrice = function() {
   $(document).ready(function() {
     $("#myBtn").click(function() {
       $("#myModal").modal();
+
+      var toppings = 0;
+      var toppingArray = [];
+        $(".toppings:checked").each(function()  {
+          toppingArray[toppings++] = parseInt($(this).val());
+        });
+
+      var size = $(".size:checked").val();
+      var quantity = $("input#pizzaQuantity").val();
+      var newPizza = new Pizza(toppings, size);
+      var total = newPizza.pizzaPrice() * quantity;
