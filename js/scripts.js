@@ -35,3 +35,14 @@ Pizza.prototype.pizzaPrice = function() {
       var quantity = $("input#pizzaQuantity").val();
       var newPizza = new Pizza(toppings, size);
       var total = newPizza.pizzaPrice() * quantity;
+
+      $(".pizza-toppings").text(toppings);
+      $(".pizza-size").text(size);
+      $(".pizza-number").text(quantity);
+      $(".pizza-price").text("$" + total);
+      $("input:checkbox").removeAttr('checked');
+      $("input#pizzaQuantity").val ("");
+
+
+      event.preventDefault();
+  });
