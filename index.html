@@ -1,47 +1,101 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title></title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title></title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href=
+  "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+  rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
+  </script>
+  <script src="js/bootstrap.min.js">
+  </script>
+  <script src="js/scripts.js">
+  </script>
+</head>
+<body>
   <div class="container-fluid jumbotron text-center">
     <h1>Pizza Place</h1>
-  </div> <!-- /JUMBOTRON -->
+  </div><!-- /JUMBOTRON -->
   <div class="container">
-    <form id="pizzas">
-      <div id="info" class="row">
-        <h2>What toppings would you like?</h3>
-        <p>Below is a list of the pizza toppings...Pick as many as you like. 50 cents each.</p>
-        <div id= "veggies" class="col-sm-3">
-          <h3>Veggies:</h3>
-          <input type="checkbox" name="toppings" class="toppings" value="tomatoes"> Tomatoes<br>
-          <input type="checkbox" name="toppings" class="toppings" value="pepperoni"> Pepperoni<br>
-          <input type="checkbox" name="toppings" class="toppings" value="extraCheese"> Extra Cheese<br>
-          <input type="checkbox" name="toppings" class="toppings" value="mushrooms"> Mushrooms<br>
-          <input type="checkbox" name="toppings" class="toppings" value="onion"> Onions<br>
-          <input type="checkbox" name="toppings" class="toppings" value="olives"> Olives<br>
-          <input type="checkbox" name="toppings" class="toppings" value="sausage"> Sausage<br>
-          <input type="checkbox" name="toppings" class="toppings" value="chicken"> Chicken<br>
-          <input type="checkbox" name="toppings" class="toppings" value="peppers"> Peppers<br>
-          <input type="checkbox" name="toppings" class="toppings" value="jalepenos"> Jalepenos<br>
-          <input type="checkbox" name="toppings" class="toppings" value="pineapple"> Pineapple<br>
-          <input type="checkbox" name="toppings" class="toppings" value="feta"> Feta<br>
+    <form id="pizzas" name="pizzas">
+      <div class="row" id="info">
+        <h2>What toppings would you like?</h2>
+        <p>Below is a list of the pizza toppings...Pick as many as you like. 50
+        cents each.</p>
+        <div class="col-sm-3" id="veggies">
+          <h3>Veggies:</h3><input class="toppings" name="toppings" type=
+          "checkbox" value="tomatoes"> Tomatoes<br>
+          <input class="toppings" name="toppings" type="checkbox" value=
+          "pepperoni"> Pepperoni<br>
+          <input class="toppings" name="toppings" type="checkbox" value=
+          "extraCheese"> Extra Cheese<br>
+          <input class="toppings" name="toppings" type="checkbox" value=
+          "mushrooms"> Mushrooms<br>
+          <input class="toppings" name="toppings" type="checkbox" value=
+          "onion"> Onions<br>
+          <input class="toppings" name="toppings" type="checkbox" value=
+          "olives"> Olives<br>
+          <input class="toppings" name="toppings" type="checkbox" value=
+          "sausage"> Sausage<br>
+          <input class="toppings" name="toppings" type="checkbox" value=
+          "chicken"> Chicken<br>
+          <input class="toppings" name="toppings" type="checkbox" value=
+          "peppers"> Peppers<br>
+          <input class="toppings" name="toppings" type="checkbox" value=
+          "jalepenos"> Jalepenos<br>
+          <input class="toppings" name="toppings" type="checkbox" value=
+          "pineapple"> Pineapple<br>
+          <input class="toppings" name="toppings" type="checkbox" value="feta">
+          Feta<br>
           <br>
         </div>
       </div>
       <div class="row">
-            <h2>What size pizza would you like?</h2>
-            <div class="form-group">
-              <input type="radio" name="size" class="size" value="small" checked> Small<br>
-              <input type="radio" name="size" class="size" value="medium"> Medium<br>
-              <input type="radio" name="size" class="size" value="large"> Large<br>
-            </div>
-  </body>
+        <h2>What size pizza would you like?</h2>
+        <div class="form-group">
+          <input checked class="size" name="size" type="radio" value="small">
+          Small<br>
+          <input class="size" name="size" type="radio" value="medium">
+          Medium<br>
+          <input class="size" name="size" type="radio" value="large"> Large<br>
+        </div>
+        <h2>How many pizzas?</h2>
+        <div class="form-group">
+          <input id="pizzaQuantity" name="pizza_quantity" type="number">
+        </div><button class="btn btn-lg btn-primary" id="myBtn" type=
+        "button">Place order</button>
+      </div>
+    </form>
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type=
+            "button">&times;</button>
+            <h3 class="modal-title">Your Order</h3>
+          </div>
+          <div class="modal-body">
+            <h4>Number of Toppings:</h4>
+            <p><span class="pizza-toppings"></span></p>
+            <h4>Pizza Size:</h4>
+            <p><span class="pizza-size"></span></p>
+            <h4>Number of Pizzas:</h4>
+            <p><span class="pizza-number"></span></p>
+            <h4>Total Price:</h4>
+            <p><span class="pizza-price"></span></p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" type=
+            "button">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
