@@ -22,27 +22,28 @@ Pizza.prototype.pizzaPrice = function() {
 
   //User Interface Logic
   $(document).ready(function() {
-    $("#myBtn").click(function() {
-      $("#myModal").modal();
+  $("#myBtn").click(function() {
+    $("#myModal").modal();
 
-      var toppings = 0;
-      var toppingArray = [];
-        $(".toppings:checked").each(function()  {
-          toppingArray[toppings++] = parseInt($(this).val());
-        });
+    var toppings = 0;
+    var toppingArray = [];
+      $(".toppings:checked").each(function()  {
+        toppingArray[toppings++] = parseInt($(this).val());
+      });
 
-      var size = $(".size:checked").val();
-      var quantity = $("input#pizzaQuantity").val();
-      var newPizza = new Pizza(toppings, size);
-      var total = newPizza.pizzaPrice() * quantity;
+    var size = $(".size:checked").val();
+    var quantity = $("input#pizzaQuantity").val();
+    var newPizza = new Pizza(toppings, size);
+    var total = newPizza.pizzaPrice() * quantity;
 
-      $(".pizza-toppings").text(toppings);
-      $(".pizza-size").text(size);
-      $(".pizza-number").text(quantity);
-      $(".pizza-price").text("$" + total);
-      $("input:checkbox").removeAttr('checked');
-      $("input#pizzaQuantity").val ("");
+    $(".pizza-toppings").text(toppings);
+    $(".pizza-size").text(size);
+    $(".pizza-number").text(quantity);
+    $(".pizza-price").text("$" + total);
+    $("input:checkbox").removeAttr('checked');
+    $("input#pizzaQuantity").val ("");
 
 
-      event.preventDefault();
+    event.preventDefault();
+  });
   });
